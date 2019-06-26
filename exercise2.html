@@ -1,0 +1,249 @@
+<style>
+    body{
+        margin:0;padding:0;
+    }
+    .header{
+        background:gray;margin:0;padding:10px;height:30px;
+
+    }
+    .header1{
+        display:inline-block;
+    }
+    .hr1{
+        float:left;
+    }
+    .hr2{
+        margin-left:500px;color:#fff;padding-top:8px;
+    }
+    .hr3{
+        float:right;
+    }
+    .header2{
+        background:#fff;height:30px;padding:10px;
+    }
+    ul{
+        list-style:none;text-align: center;
+    }
+    li{
+        display:inline-block;text-transform: capitalize;
+        margin-right: 20px;
+    }
+    li:hover{
+        border-bottom:2px solid blue;
+    }
+    .web{
+        background:#f2f4f7;
+    }
+    .web-body{display: flex;
+        height:auto;width:90%;width:80%;margin:auto;
+    }
+    .card{
+        border:1px solid #d2d7e0;
+        border-radius:5px;width:200px;background:#fff;
+        padding:5px;margin-right:5px;
+        margin-left:30px;margin-top:10px;margin-bottom:20px;
+    }
+    .card:hover{
+        box-shadow: 5px 5px 12px #98999b;
+    }
+    img{
+        width:200px;
+        border-bottom: 1px solid #f4f5f7;
+    }p{
+        color:gray;font-size:12px;
+    }
+    .content{margin-left:10px;margin-top:10px;
+    }
+    /* input[button]:hover{
+background:white;
+    } */
+    
+</style>
+<div>
+    <div class="header">
+        <div class="header1 hr1"><img style="width:60px;height:30px" src="data:image/jpeg;base64,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"/></div>
+        <div class="header1 hr2">welcome to bigbasket</div>
+        <div class="header1 hr3"><img style="width: 30px;
+            height: 30px;"src="https://www.photobootheurope.com/wp-content/uploads/2016/10/shopping-cart-logo.svg.hi_.png"/></div>
+    </div>
+    <div class="header2">
+        <ul>
+            <li>vegitables</li>
+            <li>rice</li>
+            <li>millets</li>
+            <li>pulses</li>
+            <li>cart</li>
+        </ul>
+    </div>
+
+
+    <div class="web"><div class="web-body">
+      <div class="card">
+          <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+          <div class="content">Dry Fruits</div>
+          <div class="content">1/2 KG</div>
+          <div class="content">Rs 100/-</div>
+          <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+          <div class="content">
+              <label>Quantity</label><br>
+              <select style="width:180px;">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+              </select>
+            </div><br>
+           <div style="text-align:right;">
+               <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+           </div>
+        </div>
+        <div class="card">
+                <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+                <div class="content">Dry Fruits</div>
+                <div class="content">1/2 KG</div>
+                <div class="content">Rs 100/-</div>
+                <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+                <div class="content">
+                    <label>Quantity</label><br>
+                    <select style="width:180px;">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                  </div><br>
+                 <div style="text-align:right;">
+                     <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+                 </div>
+              </div>
+              <div class="card">
+                    <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+                    <div class="content">Dry Fruits</div>
+                    <div class="content">1/2 KG</div>
+                    <div class="content">Rs 100/-</div>
+                    <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+                    <div class="content">
+                        <label>Quantity</label><br>
+                        <select style="width:180px;">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                      </div><br>
+                     <div style="text-align:right;">
+                         <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+                     </div>
+                  </div>
+
+                  <div class="card">
+                        <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+                        <div class="content">Dry Fruits</div>
+                        <div class="content">1/2 KG</div>
+                        <div class="content">Rs 100/-</div>
+                        <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+                        <div class="content">
+                            <label>Quantity</label><br>
+                            <select style="width:180px;">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                          </div><br>
+                         <div style="text-align:right;">
+                             <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+                         </div>
+                      </div>
+              
+                    </div>
+                    <div class="web-body">
+                            <div class="card">
+                                <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+                                <div class="content">Dry Fruits</div>
+                                <div class="content">1/2 KG</div>
+                                <div class="content">Rs 100/-</div>
+                                <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+                                <div class="content">
+                                    <label>Quantity</label><br>
+                                    <select style="width:180px;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    </select>
+                                  </div><br>
+                                 <div style="text-align:right;">
+                                     <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+                                 </div>
+                              </div>
+                              <div class="card">
+                                      <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+                                      <div class="content">Dry Fruits</div>
+                                      <div class="content">1/2 KG</div>
+                                      <div class="content">Rs 100/-</div>
+                                      <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+                                      <div class="content">
+                                          <label>Quantity</label><br>
+                                          <select style="width:180px;">
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                          </select>
+                                        </div><br>
+                                       <div style="text-align:right;">
+                                           <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+                                       </div>
+                                    </div>
+                                    <div class="card">
+                                          <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+                                          <div class="content">Dry Fruits</div>
+                                          <div class="content">1/2 KG</div>
+                                          <div class="content">Rs 100/-</div>
+                                          <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+                                          <div class="content">
+                                              <label>Quantity</label><br>
+                                              <select style="width:180px;">
+                                                  <option>1</option>
+                                                  <option>2</option>
+                                                  <option>3</option>
+                                                  <option>4</option>
+                                                  <option>5</option>
+                                              </select>
+                                            </div><br>
+                                           <div style="text-align:right;">
+                                               <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+                                           </div>
+                                        </div>
+                      
+                                        <div class="card">
+                                              <img src="https://www.bigbasket.com/media/customPage/b01eee88-e6bc-410e-993c-dedd012cf04b/c871e952-50ff-4c55-a895-e123a30dc744/24fc2d9a-1956-4a2d-b652-18a49f5e32df/T1_All_Dryfruits_DT_5_275x184_25thJun.jpg"/>
+                                              <div class="content">Dry Fruits</div>
+                                              <div class="content">1/2 KG</div>
+                                              <div class="content">Rs 100/-</div>
+                                              <div class="content"><p>-- standard delivery tomorrow evening</p></div>
+                                              <div class="content">
+                                                  <label>Quantity</label><br>
+                                                  <select style="width:180px;">
+                                                      <option>1</option>
+                                                      <option>2</option>
+                                                      <option>3</option>
+                                                      <option>4</option>
+                                                      <option>5</option>
+                                                  </select>
+                                                </div><br>
+                                               <div style="text-align:right;">
+                                                   <input style="border:1px solid blue;border-radius:5px;color:blue;" type="button" value="add to cart"/>
+                                               </div>
+                                            </div>
+                                    
+                                          </div>
+        </div>
+</div>
